@@ -1,1 +1,2 @@
-gradio
+gradio==3.39.0
+websocket-client
