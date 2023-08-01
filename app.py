@@ -9,7 +9,6 @@ from PIL import Image
 import io
 import os
 from folder_paths import get_folder_paths,supported_ckpt_extensions
-
 server_address = "127.0.0.1:8188"
 client_id = str(uuid.uuid4())
 
@@ -58,7 +57,7 @@ def get_images(ws, prompt):
 
 def get_models():
     models = []
-    for x in os.listdir(get_folder_paths('checkpoints')):
+    for x in os.listdir(get_folder_paths('checkpoints')[0]):
         for e in supported_ckpt_extensions:
             if x.endswith(e):
                 models.append(x)
